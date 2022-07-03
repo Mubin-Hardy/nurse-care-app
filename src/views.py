@@ -11,7 +11,7 @@ def coffee_payment(request):
         print("okeyaanu")
 
         # create Razorpay client
-        client = razorpay.Client(auth=('rzp_test_R5VKn5b737yagO', 'Gsk4JWvi4Cg4wxtgunYu4cBo'))
+        client = razorpay.Client(auth=('rzp_live_tCmL5Vkhxgttde', 'SGX705nuiAJVeEzj2kXTa5Hw'))
 
         # create order
         response_payment = client.order.create(dict(amount=amount,
@@ -46,7 +46,7 @@ def payment_status(request):
     }
 
     # client instance
-    client = razorpay.Client(auth=('rzp_test_R5VKn5b737yagO', 'Gsk4JWvi4Cg4wxtgunYu4cBo'))
+    client = razorpay.Client(auth=('rzp_live_tCmL5Vkhxgttde', 'SGX705nuiAJVeEzj2kXTa5Hw'))
     print(client)
 
     try:
