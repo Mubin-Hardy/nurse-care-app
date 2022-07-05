@@ -2,12 +2,16 @@ from django.shortcuts import render
 from .forms import CoffeePaymentForm
 import razorpay
 from .models import ColdCoffee
+from hospital import models as mod
 
 
 def coffee_payment(request):
+    
     if request.method == "POST":
         name = request.POST.get('name')
         amount = int(request.POST.get('amount')) * 100
+       
+      
         print("okeyaanu")
 
         # create Razorpay client
