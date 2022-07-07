@@ -3,12 +3,11 @@ from django.contrib.auth.models import User
 from django_google_maps import fields as map_fields
 
 
-departments=[('Cardiologist','Cardiologist'),
-('Dermatologists','Dermatologists'),
-('Emergency Medicine Specialists','Emergency Medicine Specialists'),
-('Allergists/Immunologists','Allergists/Immunologists'),
-('Anesthesiologists','Anesthesiologists'),
-('Colon and Rectal Surgeons','Colon and Rectal Surgeons')
+departments=[
+('Post surgical case','Post surgical case'),
+('Elderly care','Elderly care'),
+('Wound care infections','Wound care infections'),
+('Cancer','Cancer'),
 ]
 class Doctor(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
