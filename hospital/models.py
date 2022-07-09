@@ -16,6 +16,7 @@ class Doctor(models.Model):
     mobile = models.CharField(max_length=20,null=True)
     department= models.CharField(max_length=50,choices=departments,default='Cardiologist')
     status=models.BooleanField(default=False)
+    exp = models.CharField(max_length=100,null=True)
     @property
     def get_name(self):
         return self.user.first_name+" "+self.user.last_name
@@ -65,7 +66,7 @@ class PatientDischargeDetails(models.Model):
     address = models.CharField(max_length=40)
     mobile = models.CharField(max_length=20,null=True)
     symptoms = models.CharField(max_length=100,null=True)
-
+    
     admitDate=models.DateField(null=False)
     releaseDate=models.DateField(null=False)
     daySpent=models.PositiveIntegerField(null=False)
